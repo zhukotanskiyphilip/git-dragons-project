@@ -1,0 +1,7 @@
+C:\Users\zhuko\source\repos\Dragons\Dragons\bin\Debug\Dragons.exe.config
+C:\Users\zhuko\source\repos\Dragons\Dragons\bin\Debug\Dragons.exe
+C:\Users\zhuko\source\repos\Dragons\Dragons\bin\Debug\Dragons.pdb
+C:\Users\zhuko\source\repos\Dragons\Dragons\obj\Debug\Dragons.csprojAssemblyReference.cache
+C:\Users\zhuko\source\repos\Dragons\Dragons\obj\Debug\Dragons.csproj.CoreCompileInputs.cache
+C:\Users\zhuko\source\repos\Dragons\Dragons\obj\Debug\Dragons.exe
+C:\Users\zhuko\source\repos\Dragons\Dragons\obj\Debug\Dragons.pdb
