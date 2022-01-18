@@ -9,10 +9,16 @@ namespace Dragons
     class Player
     {
         public string name;
-        public int coins = 0;
-        public int health = 10;
-        public int damage;
-        public int armor;
+
+        public int health;
+        public int armorClass;
+
+        public int hitDamage;
+        public int biteDamage;
+
+        public int goldCoins;
+        public int silverCoins;
+        public int bronzeCoins;
 
         public int strength;
 
@@ -97,9 +103,283 @@ namespace Dragons
         //Бросьте четыре 6-гранных кости и запишите сумму трёх наибольших результатов на листке для заметок.
         //Эта сумма и есть значение выбранной характеристики.
 
+        public void RandomCharGen()
+        {
+            Console.Clear();
+
+            Random rand = new Random();
+
+            byte min = 0;
+
+            for (int i = 0; i < 4; i++)
+            {
+                byte random = (byte)rand.Next(1, 6);
+                if (min == 0) min = random;
+                else
+                {
+                    strength += Math.Max(min, random);
+                    min = Math.Min(min, random);
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                byte random = (byte)rand.Next(1, 6);
+                if (min == 0) min = random;
+                else
+                {
+                    agility += Math.Max(min, random);
+                    min = Math.Min(min, random);
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                byte random = (byte)rand.Next(1, 6);
+                if (min == 0) min = random;
+                else
+                {
+                    constitution += Math.Max(min, random);
+                    min = Math.Min(min, random);
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                byte random = (byte)rand.Next(1, 6);
+                if (min == 0) min = random;
+                else
+                {
+                    intelligence += Math.Max(min, random);
+                    min = Math.Min(min, random);
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                byte random = (byte)rand.Next(1, 6);
+                if (min == 0) min = random;
+                else
+                {
+                    wisdom += Math.Max(min, random);
+                    min = Math.Min(min, random);
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                byte random = (byte)rand.Next(1, 6);
+                if (min == 0) min = random;
+                else
+                {
+                    charisma += Math.Max(min, random);
+                    min = Math.Min(min, random);
+                }
+            }
+        }
+
         //Вариант 2: Набор
-        //Вы можете использовать следующие числа: 15, 14, 13, 12, 10, 8.
+        //Вы можете использовать следующие числа: 15, 14, 13, 12, 10, 8.
         //Назначьте каждой из характеристик одно число из набора.
+
+        public void SetCharGen()
+        {
+            bool approve;
+
+            for (int i = 0; i < 4; i++)
+            {
+                Console.Clear();
+
+                approve = false;
+                
+                while (true)
+                {
+                    Console.WriteLine($"Pick a stat equal to {15 - i}:\n" +
+                        "1. Strength\n" +
+                        "2. Agility\n" +
+                        "3. Constitution\n" +
+                        "4. Intelligence\n" +
+                        "5. Wisdom\n" +
+                        "6. Charisma\n" +
+                        "Please write the number of the selected option.\n");
+
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            if (strength != 0) Console.WriteLine($"This attribute has already been assigned a value {strength}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is strength? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    strength = 15 - i;
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "2":
+                            if (agility != 0) Console.WriteLine($"This attribute has already been assigned a value {agility}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is agility? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    agility = 15 - i;
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "3":
+                            if (constitution != 0) Console.WriteLine($"This attribute has already been assigned a value {constitution}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is constitution? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    constitution = 15 - i;
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "4":
+                            if (intelligence != 0) Console.WriteLine($"This attribute has already been assigned a value {intelligence}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is intelligence? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    intelligence = 15 - i;
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "5":
+                            if (wisdom != 0) Console.WriteLine($"This attribute has already been assigned a value {wisdom}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is wisdom? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    wisdom = 15 - i;
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "6":
+                            if (charisma != 0) Console.WriteLine($"This attribute has already been assigned a value {charisma}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is charisma? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    charisma = 15 - i;
+                                    approve = true;
+                                }
+                            }
+                            break;
+                    }
+
+                    if (approve == true) break;
+                }
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                Console.Clear();
+
+                approve = false;
+
+                while (true)
+                {
+                    Console.WriteLine($"Pick a stat equal to {10 - (i * 2)}:\n" +
+                        "1. Strength\n" +
+                        "2. Agility\n" +
+                        "3. Constitution\n" +
+                        "4. Intelligence\n" +
+                        "5. Wisdom\n" +
+                        "6. Charisma\n" +
+                        "Please write the number of the selected option.\n");
+
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            if (strength != 0) Console.WriteLine($"This attribute has already been assigned a value {strength}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is strength? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    strength = 10 - (i * 2);
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "2":
+                            if (agility != 0) Console.WriteLine($"This attribute has already been assigned a value {agility}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is agility? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    agility = 10 - (i * 2);
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "3":
+                            if (constitution != 0) Console.WriteLine($"This attribute has already been assigned a value {constitution}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is constitution? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    constitution = 10 - (i * 2);
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "4":
+                            if (intelligence != 0) Console.WriteLine($"This attribute has already been assigned a value {intelligence}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is intelligence? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    intelligence = 10 - (i * 2);
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "5":
+                            if (wisdom != 0) Console.WriteLine($"This attribute has already been assigned a value {wisdom}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is wisdom? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    wisdom = 10 - (i * 2);
+                                    approve = true;
+                                }
+                            }
+                            break;
+                        case "6":
+                            if (charisma != 0) Console.WriteLine($"This attribute has already been assigned a value {charisma}.");
+                            else
+                            {
+                                Console.WriteLine("Your choice is charisma? y/n");
+                                if (Console.ReadLine() == "y")
+                                {
+                                    charisma = 10 - (i * 2);
+                                    approve = true;
+                                }
+                            }
+                            break;
+                    }
+
+                    if (approve == true) break;
+                }
+            }
+        }
 
         //Вариант 3: Вручную
         //Вы получаете 27 пунктов, которые распределяете между значениями характеристик.
@@ -116,6 +396,26 @@ namespace Dragons
         //13       5
         //14       7 
         //15       9
+
+        public void ShowCharacteriscs()
+        {
+            Console.WriteLine($"Your strength is {strength}\n" +
+                $"Your agility is {agility}\n" +
+                $"Your constitution is {constitution}\n" +
+                $"Your intelligence is {intelligence}\n" +
+                $"Your wisdom is {wisdom}\n" +
+                $"Your charisma is {charisma}\n");
+        }
+
+        public void ResetStats()
+        {
+            strength = 0;
+            agility = 0;
+            constitution = 0;
+            intelligence = 0;
+            wisdom = 0;
+            charisma = 0;
+        }
 
         public int experience = 0;
 
@@ -141,6 +441,26 @@ namespace Dragons
         //265000 18      +6
         //305000 19      +6
         //355000 20      +6
+
+        public Player()
+        {
+            health = 10;
+            armorClass = 0;
+
+            hitDamage = 6;
+            biteDamage = 7;
+
+            goldCoins = 0;
+            silverCoins = 0;
+            bronzeCoins = 0;
+
+            strength = 0;
+            agility = 0;
+            constitution = 0;
+            intelligence = 0;
+            wisdom = 0;
+            charisma = 0;
+        }
 
         //остановился на стр. 18
     }
