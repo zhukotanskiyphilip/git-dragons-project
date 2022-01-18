@@ -184,14 +184,14 @@ namespace Dragons
 
         public void SetCharGen()
         {
-            bool approve;
+            bool success;
 
             for (int i = 0; i < 4; i++)
             {
                 Console.Clear();
 
-                approve = false;
-                
+                success = false;
+
                 while (true)
                 {
                     Console.WriteLine($"Pick a stat equal to {15 - i}:\n" +
@@ -206,80 +206,82 @@ namespace Dragons
                     switch (Console.ReadLine())
                     {
                         case "1":
-                            if (strength != 0) Console.WriteLine($"This attribute has already been assigned a value {strength}.");
+                            if (strength != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {strength}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is strength? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    strength = 15 - i;
-                                    approve = true;
-                                }
+                                strength = 15 - i;
+                                success = true;
                             }
                             break;
                         case "2":
-                            if (agility != 0) Console.WriteLine($"This attribute has already been assigned a value {agility}.");
+                            if (agility != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {agility}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is agility? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    agility = 15 - i;
-                                    approve = true;
-                                }
+                                agility = 15 - i;
+                                success = true;
                             }
                             break;
                         case "3":
-                            if (constitution != 0) Console.WriteLine($"This attribute has already been assigned a value {constitution}.");
+                            if (constitution != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {constitution}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is constitution? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    constitution = 15 - i;
-                                    approve = true;
-                                }
+                                constitution = 15 - i;
+                                success = true;
                             }
                             break;
                         case "4":
-                            if (intelligence != 0) Console.WriteLine($"This attribute has already been assigned a value {intelligence}.");
+                            if (intelligence != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {intelligence}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is intelligence? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    intelligence = 15 - i;
-                                    approve = true;
-                                }
+
+                                intelligence = 15 - i;
+                                success = true;
                             }
                             break;
                         case "5":
-                            if (wisdom != 0) Console.WriteLine($"This attribute has already been assigned a value {wisdom}.");
+                            if (wisdom != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {wisdom}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is wisdom? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    wisdom = 15 - i;
-                                    approve = true;
-                                }
+
+                                wisdom = 15 - i;
+                                success = true;
                             }
                             break;
                         case "6":
-                            if (charisma != 0) Console.WriteLine($"This attribute has already been assigned a value {charisma}.");
+                            if (charisma != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {charisma}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is charisma? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    charisma = 15 - i;
-                                    approve = true;
-                                }
+                                charisma = 15 - i;
+                                success = true;
                             }
                             break;
                     }
 
-                    if (approve == true) break;
+                    if (success == true) break;
                 }
             }
 
@@ -287,7 +289,7 @@ namespace Dragons
             {
                 Console.Clear();
 
-                approve = false;
+                success = false;
 
                 while (true)
                 {
@@ -303,80 +305,80 @@ namespace Dragons
                     switch (Console.ReadLine())
                     {
                         case "1":
-                            if (strength != 0) Console.WriteLine($"This attribute has already been assigned a value {strength}.");
+                            if (strength != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {strength}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is strength? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    strength = 10 - (i * 2);
-                                    approve = true;
-                                }
+                                strength = 10 - (i * 2);
+                                success = true;
                             }
                             break;
                         case "2":
-                            if (agility != 0) Console.WriteLine($"This attribute has already been assigned a value {agility}.");
+                            if (agility != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {agility}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is agility? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    agility = 10 - (i * 2);
-                                    approve = true;
-                                }
+                                agility = 10 - (i * 2);
+                                success = true;
                             }
                             break;
                         case "3":
-                            if (constitution != 0) Console.WriteLine($"This attribute has already been assigned a value {constitution}.");
+                            if (constitution != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {constitution}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is constitution? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    constitution = 10 - (i * 2);
-                                    approve = true;
-                                }
+                                constitution = 10 - (i * 2);
+                                success = true;
                             }
                             break;
                         case "4":
-                            if (intelligence != 0) Console.WriteLine($"This attribute has already been assigned a value {intelligence}.");
+                            if (intelligence != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {intelligence}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is intelligence? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    intelligence = 10 - (i * 2);
-                                    approve = true;
-                                }
+                                intelligence = 10 - (i * 2);
+                                success = true;
                             }
                             break;
                         case "5":
-                            if (wisdom != 0) Console.WriteLine($"This attribute has already been assigned a value {wisdom}.");
+                            if (wisdom != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {wisdom}.");
+                            }
                             else
                             {
-                                Console.WriteLine("Your choice is wisdom? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    wisdom = 10 - (i * 2);
-                                    approve = true;
-                                }
+                                wisdom = 10 - (i * 2);
+                                success = true;
                             }
                             break;
                         case "6":
-                            if (charisma != 0) Console.WriteLine($"This attribute has already been assigned a value {charisma}.");
+                            if (charisma != 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine($"This attribute has already been assigned a value {charisma}.");
+                            } 
                             else
                             {
-                                Console.WriteLine("Your choice is charisma? y/n");
-                                if (Console.ReadLine() == "y")
-                                {
-                                    charisma = 10 - (i * 2);
-                                    approve = true;
-                                }
+                                charisma = 10 - (i * 2);
+                                success = true;
                             }
                             break;
                     }
 
-                    if (approve == true) break;
+                    if (success == true) break;
                 }
             }
         }
