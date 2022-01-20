@@ -8,6 +8,8 @@ namespace Dragons
 {
     class Program
     {
+        // ост стр 24
+
         static void Main(string[] args)
         {
             PlayerCreator();
@@ -47,11 +49,7 @@ namespace Dragons
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        player.RandomCharGen();
-                        success = true;
-                        player.ShowCharacteriscs();
-                        break;
-                    case "Random":
+                        Console.Clear();
                         player.RandomCharGen();
                         success = true;
                         player.ShowCharacteriscs();
@@ -61,14 +59,10 @@ namespace Dragons
                         success = true;
                         player.ShowCharacteriscs();
                         break;
-                    case "Set":
-                        player.SetCharGen();
+                    case "3":
+                        player.ManualCharGen();
                         success = true;
                         player.ShowCharacteriscs();
-                        break;
-                    case "3":
-                        break;
-                    case "Manually":
                         break;
                 }
 

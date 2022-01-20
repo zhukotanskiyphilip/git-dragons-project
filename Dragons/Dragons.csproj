@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character.cs" />
+    <Compile Include="Dwarf\Dwarf.cs" />
+    <Compile Include="Elf\Elf.cs" />
+    <Compile Include="Dwarf\Hill Dwarf.cs" />
+    <Compile Include="Dwarf\Mountain Dwarf.cs" />
+    <Compile Include="Elf\High Elf.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
