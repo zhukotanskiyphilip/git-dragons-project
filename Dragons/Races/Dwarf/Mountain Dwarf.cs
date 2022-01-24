@@ -20,6 +20,7 @@ namespace Dragons
             RandomCharGen();
             // Базовый бонус дварфов
             constitution += 2;
+            speed = 25;
             // Базовый бонус горных дварфов
             strength += 2;
         }

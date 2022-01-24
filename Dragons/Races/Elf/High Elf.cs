@@ -24,6 +24,7 @@ namespace Dragons
             RandomCharGen();
             // Базовый бонус эльфов
             agility += 2;
+            speed = 30;
             // Базовый бонус высших эльфов
             intelligence += 1;
         }

@@ -8,6 +8,10 @@ namespace Dragons
 {
     class Character
     {
+        public string name;
+
+        public string surname;
+
         public int hitpoints = 0;
 
         public bool male = true;
@@ -156,6 +160,13 @@ namespace Dragons
                     size = "Medium";
                     speed = 30;
                     break;
+                case "Halfling":
+                    age = rand.Next(18, 150);
+                    height = rand.Next(80, 100);
+                    weight = rand.Next(18, 25);
+                    size = "Small";
+                    speed = 25;
+                    break;
                 default: 
                     age = 0;
                     height = rand.Next(0, 15);
@@ -187,6 +198,21 @@ namespace Dragons
             intelligence = characteristics[3];
             wisdom = characteristics[4];
             charisma = characteristics[5];
+        }
+
+        public void RandomNameGen(string[] maleNames, string[] femaleNames, string[] surnames, string[] childrenNames = null, int maturity = 0)
+        {
+            Random rand = new Random();
+
+            if (age > maturity && childrenNames != null)
+            {
+                if (male == true)
+                    name = maleNames[rand.Next(0, maleNames.Length)];
+                else name = femaleNames[rand.Next(0, femaleNames.Length)];
+            }
+            else name = childrenNames[rand.Next(0, childrenNames.Length)];
+
+            surname = surnames[rand.Next(0, surnames.Length)];
         }
 
         //Вариант 2: Набор

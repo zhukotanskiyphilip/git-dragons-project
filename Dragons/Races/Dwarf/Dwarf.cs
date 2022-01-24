@@ -8,9 +8,6 @@ namespace Dragons
 {
     class Dwarf : Character
     {
-        public string name;
-        public string clanName;
-
         public void DwarfNameGen()
         {
             string[] maleNames = {"Adrik", "Alberich", "Barend", "Baern", "Brottor", "Bruenor", "Vondal", "Waite", "Gardain", "Dain",
@@ -25,7 +22,7 @@ namespace Dragons
             if (male == true)
                 name = maleNames[rand.Next(0, maleNames.Length)];
             else name = femaleNames[rand.Next(0, femaleNames.Length)];
-            clanName = clanNames[rand.Next(0, clanNames.Length)];
+            surname = clanNames[rand.Next(0, clanNames.Length)];
         }
 
         // ОСОБЕННОСТИ ДВАРФОВ

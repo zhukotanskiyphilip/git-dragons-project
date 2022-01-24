@@ -44,14 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="Elf\Dark Elf.cs" />
     <Compile Include="Dwarf\Dwarf.cs" />
     <Compile Include="Elf\Elf.cs" />
     <Compile Include="Dwarf\Hill Dwarf.cs" />
     <Compile Include="Dwarf\Mountain Dwarf.cs" />
     <Compile Include="Elf\High Elf.cs" />
+    <Compile Include="Halfling\Halfling.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Elf\Wood Elf.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
