@@ -10,7 +10,7 @@ namespace Dragons
     {
         public void ElfNameGen()
         {
-            string[] childrensNames = { "Ara", "Brin", "Val", "Del", "Innil", "Lael", "Mella", "Nail",
+            string[] childrenNames = { "Ara", "Brin", "Val", "Del", "Innil", "Lael", "Mella", "Nail",
                 "Naeris", "Rael", "Rynn", "Sai", "Sillin", "Tia", "Fann", "Faen", "Erin" };
             string[] maleNames = {"Adran", "Aramil", "Arannis", "Aust", "Aelar", "Beiro", "Berrian", "Varis", "Galinndan",
                 "Ivellios", "Immeral", "Carrick", "Kuarion", "Lausian", "Mindartis", "Paelias", "Peren", "Reardon", "Rolen",
@@ -30,7 +30,7 @@ namespace Dragons
                     name = maleNames[rand.Next(0, maleNames.Length)];
                 else name = femaleNames[rand.Next(0, femaleNames.Length)];
             }
-            else name = childrensNames[rand.Next(0, childrensNames.Length)];
+            else name = childrenNames[rand.Next(0, childrenNames.Length)];
             surname = surnames[rand.Next(0, surnames.Length)];
         }
 

@@ -8,107 +8,151 @@ namespace Dragons
 {
     class Character
     {
+        // Имя и фамилия
+
         public string name;
 
         public string surname;
 
-        public int hitpoints = 0;
+        // Пол
 
         public bool male = true;
 
-        public string race;
+        // Раса
+
+        public enum Race
+        {
+            Dwarf,
+            Elf,
+            Halfling,
+            Human,
+            Dragonborn,
+            Gnome,
+            Half_Elf,
+            Half_Orc,
+            Tiefling
+        }
+
+        public Race race;
+
+        // Случайная генерация имени
+
+        public void RandomNameGen(string[] maleNames, string[] femaleNames, string[] surnames, string[] childrenNames = null, int maturity = 0)
+        {
+            Random rand = new Random();
+
+            if (age > maturity && childrenNames != null)
+            {
+                if (male == true)
+                    name = maleNames[rand.Next(0, maleNames.Length)];
+                else name = femaleNames[rand.Next(0, femaleNames.Length)];
+            }
+            else name = childrenNames[rand.Next(0, childrenNames.Length)];
+
+            surname = surnames[rand.Next(0, surnames.Length)];
+        }
+
+        // Возраст
 
         public int age;
 
+        public int ageMax;
+
+        public int ageMin;
+
+        // Мировоззрение
+
+        public enum Alignment
+        {
+            Lawful_Good,
+            Lawful_Neutral,
+            Lawful_Evil,
+            Neutral_Good,
+            True_Neutral,
+            Neutral_Evil,
+            Chaotic_Neutral,
+            Chaotic_Good,
+            Chaotic_Evil
+        }
+
+        public Alignment alignment;
+
+        public int alignmentMin;
+
+        public int alignmentMax;
+
+        // Размер
+
+        // Tiny - 2½ by 2½ ft.
+        // Small - 5 by 5 ft.
+        // Medium - 5 by 5 ft.
+        // Large - 10 by 10 ft.
+        // Huge - 15 by 15 ft.
+        // Gargantuan - 20 by 20 ft.
+
+        public enum Size
+        {
+            Tiny,
+            Small,
+            Medium,
+            Large,
+            Huge,
+            Gargantuan
+        }
+
+        public Size size;
+
+        // Рост
+
         public int height;
+
+        public int heightMax;
+
+        public int heightMin;
+
+        // Вес
 
         public int weight;
 
-        public string size;
+        public int weightMax;
+
+        public int weightMin;
+
+        // Скорость
 
         public int speed;
 
-        public int experience = 0;
-
-        //РАЗВИТИЕ ПЕРСОНАЖА
-        //Опыт   Уровень Бонус мастерства
-        //0      1       +2
-        //300    2       +2
-        //900    3       +2
-        //2700   4       +2
-        //6500   5       +3
-        //14000  6       +3
-        //23000  7       +3
-        //34000  8       +3
-        //48000  9       +4
-        //64000  10      +4
-        //85000  11      +4
-        //100000 12      +4
-        //120000 13      +5
-        //140000 14      +5
-        //165000 15      +5
-        //195000 16      +5
-        //225000 17      +6
-        //265000 18      +6
-        //305000 19      +6
-        //355000 20      +6
+        // ХАРАКТЕРИСТИКИ
 
         public int strength;
 
-        //Показатель: Природный атлетизм, физическая сила
-        //Важна для: Варвар, воин, паладин
-        //Расовый бонус: 
-        //Горный дварф(+2) Полуорк(+2)
-        //Человек(+1) Драконорождённый(+2)
-        //Высокое значение Силы соответствует плотному или атлетичному телу, низкое - худому или тучному.
+        // Показатель: Природный атлетизм, физическая сила
+        // Высокое значение Силы соответствует плотному или атлетичному телу, низкое - худому или тучному.
 
         public int agility;
 
-        //Показатель: Проворство, реакция, равновесие
-        //Важна для: Монах, плут, следопыт
-        //Расовый бонус: 
-        //Эльф(+2) Лесной гном(+1)
-        //Полурослик(+2) Человек(+1)
-        //Высокое значение Ловкости соответствует гибкому и стройному телу, низкое - долговязому и неуклюжему.
+        // Показатель: Проворство, реакция, равновесие
+        // Высокое значение Ловкости соответствует гибкому и стройному телу, низкое - долговязому и неуклюжему.
 
         public int constitution;
 
-        //Показатель: Здоровье, выносливость, жизненная сила
-        //Важно для: Все классы
-        //Расовый бонус: 
-        //Дварф(+2) Каменный гном(+1)
-        //Человек(+1) Коренастый полурослик(+1)
-        //Полуорк(+1)
-        //Высокое значение Телосложения соответствует полному энергии персонажу, низкое - болезненному и хилому.
+        // Показатель: Здоровье, выносливость, жизненная сила
+        // Высокое значение Телосложения соответствует полному энергии персонажу, низкое - болезненному и хилому.
 
         public int intelligence;
 
-        //Показатель: Здоровье, выносливость, жизненная сила
-        //Важно для: Все классы
-        //Расовый бонус: 
-        //Дварф(+2) Каменный гном(+1)
-        //Человек(+1) Коренастый полурослик(+1)
-        //Полуорк(+1)
-        //Высокое значение Интеллекта соответствует любознательности и прилежности, низкое - примитивной речи и слабоумию.
+        // Показатель: Здоровье, выносливость, жизненная сила
+        // Высокое значение Интеллекта соответствует любознательности и прилежности, низкое - примитивной речи и слабоумию.
 
         public int wisdom;
 
-        //Показатель: Осведомлённость, интуиция, проницательность
-        //Важна для: Друид, жрец
-        //Расовый бонус: 
-        //Холмовой дварф(+1) Человек(+1)
-        //Лесной эльф(+1)
-        //Высокое значение Мудрости соответствует рассудительности и сопереживанию, низкое - рассеянности, безрассудству и забывчивости.
+        // Показатель: Осведомлённость, интуиция, проницательность
+        // Высокое значение Мудрости соответствует рассудительности и сопереживанию, низкое - рассеянности, безрассудству и забывчивости.
 
         public int charisma;
 
-        //Показатель: Уверенность, красноречие, лидерство
-        //Важна для: Бард, колдун, чародей
-        //Расовый бонус: 
-        //Полуэльф(+2) Драконорождённый(+1)
-        //Дроу(+1) Человек(+1)
-        //Тифлинг(+2) Легконогий полурослик(+1)
-        //Высокое значение Харизмы соответствует уверенности и привлекательности, низкое - раздражающести, неубедительности и робости.
+        // Показатель: Уверенность, красноречие, лидерство
+        // Высокое значение Харизмы соответствует уверенности и привлекательности, низкое - раздражающести, неубедительности и робости.
 
         //ЗНАЧЕНИЯ И МОДИФИКАТОРЫ ХАРАКТЕРИСТИК
         //Знач. Модификатор
@@ -144,37 +188,9 @@ namespace Dragons
 
             Random rand = new Random();
 
-            switch (race)
-            {
-                case "Dwarf":
-                    age = rand.Next(16, 500);
-                    height = rand.Next(122, 152);
-                    weight = rand.Next(60, 75);
-                    size = "Medium";
-                    speed = 25;
-                    break;
-                case "Elf": 
-                    age = rand.Next(16, 750);
-                    height = rand.Next(150, 185);
-                    weight = rand.Next(45, 65);
-                    size = "Medium";
-                    speed = 30;
-                    break;
-                case "Halfling":
-                    age = rand.Next(18, 150);
-                    height = rand.Next(80, 100);
-                    weight = rand.Next(18, 25);
-                    size = "Small";
-                    speed = 25;
-                    break;
-                default: 
-                    age = 0;
-                    height = rand.Next(0, 15);
-                    weight = rand.Next(1, 5);
-                    size = "Small";
-                    speed = 5;
-                    break;
-            }
+            age = rand.Next(ageMin, ageMax);
+            height = rand.Next(heightMin, heightMax);
+            weight = rand.Next(weightMin, weightMax);
 
             int min = 0;
 
@@ -198,21 +214,6 @@ namespace Dragons
             intelligence = characteristics[3];
             wisdom = characteristics[4];
             charisma = characteristics[5];
-        }
-
-        public void RandomNameGen(string[] maleNames, string[] femaleNames, string[] surnames, string[] childrenNames = null, int maturity = 0)
-        {
-            Random rand = new Random();
-
-            if (age > maturity && childrenNames != null)
-            {
-                if (male == true)
-                    name = maleNames[rand.Next(0, maleNames.Length)];
-                else name = femaleNames[rand.Next(0, femaleNames.Length)];
-            }
-            else name = childrenNames[rand.Next(0, childrenNames.Length)];
-
-            surname = surnames[rand.Next(0, surnames.Length)];
         }
 
         //Вариант 2: Набор
@@ -451,7 +452,7 @@ namespace Dragons
             }
         }
 
-        public void ShowCharacteriscs()
+        public void ShowCharacterics()
         {
             Console.WriteLine($"Your strength is {strength}\n" +
                 $"Your agility is {agility}\n" +
@@ -470,5 +471,53 @@ namespace Dragons
             wisdom = 8;
             charisma = 8;
         }
+
+        // ВНЕШНОСТЬ
+
+        public string skinColor;
+        public string hairColor;
+        public string eyeColor;
+        public string hair;
+        public string beard;
+        public string mustache;
+
+        public void RandomAppearanceGen(bool male, string[] skinColor, string[] hairColor, string[] eyeColor, string[] hair, string[] beard, string[] mustache)
+        {
+            Random rand = new Random();
+
+            this.skinColor = skinColor[rand.Next(0, skinColor.Length)];
+            this.hairColor = hairColor[rand.Next(0, hairColor.Length)];
+            this.eyeColor = eyeColor[rand.Next(0, eyeColor.Length)];
+            this.hair = hair[rand.Next(0, hair.Length)];
+            if(male == true)
+            {
+                this.beard = beard[rand.Next(0, beard.Length)];
+                this.mustache = mustache[rand.Next(0, mustache.Length)];
+            }
+        }
+
+        //РАЗВИТИЕ ПЕРСОНАЖА
+
+        //Опыт   Уровень Бонус мастерства
+        //0      1       +2
+        //300    2       +2
+        //900    3       +2
+        //2700   4       +2
+        //6500   5       +3
+        //14000  6       +3
+        //23000  7       +3
+        //34000  8       +3
+        //48000  9       +4
+        //64000  10      +4
+        //85000  11      +4
+        //100000 12      +4
+        //120000 13      +5
+        //140000 14      +5
+        //165000 15      +5
+        //195000 16      +5
+        //225000 17      +6
+        //265000 18      +6
+        //305000 19      +6
+        //355000 20      +6
     }
 }

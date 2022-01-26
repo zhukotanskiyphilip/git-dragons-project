@@ -9,14 +9,40 @@ namespace Dragons
     class Human : Character
     {
         // ОСОБЕННОСТИ ЛЮДЕЙ
-        // Рост от 152 до 184 сантиметров.
-        // Вес от 60 до 112 килограмм.
-        // Возраст от 20 до 100 лет.
+
+        // Увеличение характеристик. Значение всех характеристик увеличивается на 1.
+        // Возраст. Люди становятся взрослыми в районе 20 лет, и живут менее столетия. 
+        // Мировоззрение. Люди не имеют склонности к определённому мировоззрению.
+        // Размер - Средний.
+        // Рост - 152 - 183 сантиметра.
+        // Вес - 60 - 112 килограмм.
+        // Скорость - 30 футов.
+        // Языки. Общий и ещё один на выбор.
+
+        // АЛЬТЕРНАТИВНЫЕ ОСОБЕННОСТИ ЛЮДЕЙ
+
+        // Вместо указанного выше стандартного увеличения характеристик:
+        // Увеличение характеристик. Значение двух характеристик на ваш выбор увеличивается на 1. 
+        // Навыки. Вы получаете владение одним навыком на ваш выбор. 
+        // Черта. Вы получаете одну черту на ваш выбор.
+
+        // ВНЕШНОСТЬ
+        // Волосы - любые.
+        public string[] allowedHair = { "None", "Short", "Long" };
+        // Бороды - любые.
+        public string[] allowedBeard = { "None", "Short", "Long" };
+        // Усы - любые.
+        public string[] allowedMustache = { "None", "Short", "Long" };
+
+        // ПОДРАСЫ
 
         // Дамарец / Damaran
         // Кожа варьируется от смуглого до светлого.
+        public string[] damaranSkinColor = { "Dark", "Light" };
         // Волосы обычно коричневые или чёрные.
+        public string[] damaranHairColor = { "Brown", "Black" };
         // Цвет глаз - карие.
+        public string[] damaranEyeColor = { "Brown" };
 
         string[] maleDamaranNames = { "Ivor", "Bor", "Glair", "Grigor", "Egan", "Kozef", "Mival", "Eagle", "Pavel", "Sergor", "Faudel" };
         string[] femaleDamaranNames = { "Aletra", "Zora", "Kara", "Katernin", "Mara", "Natalie", "Olma", "Tana" };
@@ -71,18 +97,60 @@ namespace Dragons
         string[] femaleTuramiNames = { "Balama", "Vonda", "Jalana", "Dona", "Kuara", "Louise", "Martha", "Selise", "Faila" };
         string[] surnamesTurami = { "Agosto", "Astorio", "Domine", "Calabra", "Marivaldi", "Pisacar", "Ramondo", "Falone" };
 
-        // Чондатанец /
+        // Чондатанец / Chondathan
+        // Кожа - смуглая.
+        // Волосы - от светлых до почти чёрных.
+        // Глаза - зелёные или карие.
 
-        // Шу / 
+        string[] maleChondathanNames = { "Gorstag", "Grim", "Darvin", "Dorn", "Malark", "Morn", "Randal", "Stedd", "Helm", "Evendur" };
+        string[] femaleChondathanNames = { "Arvin", "Jessail", "Kerry", "Lurin", "Miri", "Rowan", "Tessele", "Shandry", "Esvel" };
+        string[] surnamesChondathan = { "Buckman", "Graycastle", "Dundragon", "Tolstag", "Evenwood", "Emblecrown" };
+
+        // Шу / Shou
+        // Кожа - желтовато-бронзовая.
+        // Волосы - тёмные.
+        // Глаза - чёрные.
+
+        string[] maleShouNames = { "An", "Wen", "Long", "Lian", "Meng", "On", "Fai", "Jiong", "Jian", "Chen", "Chi", "Shan", "Shui" };
+        string[] femaleShouNames = { "Bai", "Xiao", "Lei", "Mei", "Tai", "Jia", "Chao", "Shui" };
+        string[] surnamesShou = { "Wan", "Kao", "Kung", "Lao", "Ling", "Mei", "Ping", "Sum", "Tan", "Huang", "Chien", "Shin" };
 
         public Human(bool male, string subrace)
         {
             this.male = male;
 
+            race = Race.Human;
+
+            ageMin = 20;
+            ageMax = 100;
+
+            alignmentMin = 0;
+            alignmentMax = 5;
+
+            size = Size.Medium;
+
+            heightMin = 152;
+            heightMax = 183;
+
+            weightMin = 60;
+            weightMax = 112;
+
+            speed = 30;
+
+            RandomCharGen();
+
+            strength++;
+            agility++;
+            constitution++;
+            intelligence++;
+            wisdom++;
+            charisma++;
+
             switch (subrace)
             {
                 case "Damaran":
                     RandomNameGen(maleDamaranNames, femaleDamaranNames, surnamesDamaran);
+                    RandomAppearanceGen(male, damaranSkinColor, damaranHairColor, damaranEyeColor, allowedHair, allowedBeard, allowedMustache);
                     break;
                 case "Illuskan":
                     RandomNameGen(maleIlluskanNames, femaleIlluskanNames, surnamesIlluskan);
@@ -97,9 +165,16 @@ namespace Dragons
                     RandomNameGen(maleRashemiNames, femaleRashemiNames, surnamesRashemi);
                     break;
                 case "Tethyrian":
+                    RandomNameGen(maleChondathanNames, femaleChondathanNames, surnamesChondathan);
                     break;
                 case "Turami":
                     RandomNameGen(maleTuramiNames, femaleTuramiNames, surnamesTurami);
+                    break;
+                case "Chondathan":
+                    RandomNameGen(maleChondathanNames, femaleChondathanNames, surnamesChondathan);
+                    break;
+                case "Shou":
+                    RandomNameGen(maleShouNames, femaleShouNames, surnamesShou);
                     break;
             }
         }

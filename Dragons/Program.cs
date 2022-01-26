@@ -8,8 +8,6 @@ namespace Dragons
 {
     class Program
     {
-        // ост стр 24
-
         static void Main(string[] args)
         {
             PlayerCreator();
@@ -52,17 +50,17 @@ namespace Dragons
                         Console.Clear();
                         player.RandomCharGen();
                         success = true;
-                        player.ShowCharacteriscs();
+                        player.ShowCharacterics();
                         break;
                     case "2":
                         player.SetCharGen();
                         success = true;
-                        player.ShowCharacteriscs();
+                        player.ShowCharacterics();
                         break;
                     case "3":
                         player.ManualCharGen();
                         success = true;
-                        player.ShowCharacteriscs();
+                        player.ShowCharacterics();
                         break;
                 }
 

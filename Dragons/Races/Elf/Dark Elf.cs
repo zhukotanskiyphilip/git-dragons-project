@@ -32,7 +32,6 @@ namespace Dragons
             RandomCharGen();
             // Базовый бонус эльфов
             agility += 2;
-            speed = 30;
             // Базовый бонус тёмных эльфов
             charisma += 1;
         }
