@@ -44,12 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
-    <Compile Include="Races\Human\Human.cs" />
+    <Compile Include="Races\Human.cs" />
     <Compile Include="Races\Elf\Dark Elf.cs" />
-    <Compile Include="Races\Dwarf\Dwarf.cs" />
+    <Compile Include="Races\Dwarf.cs" />
     <Compile Include="Races\Elf\Elf.cs" />
-    <Compile Include="Races\Dwarf\Hill Dwarf.cs" />
-    <Compile Include="Races\Dwarf\Mountain Dwarf.cs" />
     <Compile Include="Races\Elf\High Elf.cs" />
     <Compile Include="Races\Halfling\Halfling.cs" />
     <Compile Include="Races\Halfling\Light-Leged Halfling.cs" />
@@ -62,5 +60,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

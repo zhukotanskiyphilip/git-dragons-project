@@ -50,15 +50,23 @@ namespace Dragons
 
         // Иллусканец / Illuskan
         // Кожа - светлая.
-        // Глаза - голубые или серые со стальным оттенком. 
+        public string[] illuskanSkinColor = { "Light" };
         // У большинства чёрные волосы цвета вороньего крыла, иногда светлые, рыжие или светло-русые волосы.
+        public string[] illuskanHairColor = { "Black", "Blond", "Red", "Light Blond" };
+        // Глаза - голубые или серые со стальным оттенком.
+        public string[] illuskanEyeColor = { "Blue", "Gray" };
 
         string[] maleIlluskanNames = { "Blas", "Bran", "Get", "Lander", "Lute", "Mulser", "Stor", "Taman", "Urt", "Frat", "Ender" };
         string[] femaleIlluskanNames = { "Amafrey", "Betkha", "Vestra", "Ketra", "Mara", "Olga", "Silifrey", "Cefrey" };
         string[] surnamesIlluskan = { "Brightwood", "Winddriver", "Luckman", "Helder", "Hornraven", "Stormwind" };
 
         // Калишит / Calishite
-        // Имеют смугло-коричневую кожу, волосы и глаза.
+        // Кожа - смугло-коричневая.
+        public string[] сalishiteSkinColor = { "Dark Brown" };
+        // Волосы - коричневые.
+        public string[] сalishiteHairColor = { "Brown" };
+        // Глаза - коричневые.
+        public string[] сalishiteEyeColor = { "Brown" };
 
         string[] maleCalishiteNames = { "Aseir", "Bardeid", "Zasheir", "Khemed", "Mehmen", "Sudeiman", "Haseid" };
         string[] femaleCalishiteNames = { "Atala", "Jasmal", "Zasheida", "Meilil", "Seydil", "Seipora", "Ham", "Yasheira" };
@@ -66,17 +74,23 @@ namespace Dragons
 
         // Мулан / Mulan
         // Кожа - цвета янтаря.
-        // Глаза - карие или светло-коричневые.
+        public string[] mulanSkinColor = { "Amber" };
         // Волосы - от чёрного до тёмно-коричневого оттенков.
-
+        public string[] mulanHairColor = { "Black", "Dark Brown" };
+        // Глаза - карие или светло-коричневые.
+        public string[] mulanEyeColor = { "Brown", "Light Brown" };
+        
         string[] maleMulanNames = { "Aot", "Bareris", "Ketoth", "Mu med", "Ramas", "So - Kehur", "Thazar - De", "Urkhur", "Ehput Ki" };
         string[] femaleMulanNames = { "Arizima", "Zolis", "Muriti", "Nefis", "Nulara", "Sefris", "Tola", "Umar", "Chathi" };
         string[] surnamesMulan = { "Ankhalab", "Anskuld", "Natandem", "Serpet", "Uutrakt", "Fezim", "Hahpet" };
 
         // Рашеми / Rashemi
         // Кожа - тёмная.
-        // Глаза - чёрные.
+        public string[] rashemiSkinColor = { "Dark" };
         // Волосы - чёрные.
+        public string[] rashemiHairColor = { "Black" };
+        // Глаза - чёрные.
+        public string[] rashemiEyeColor = { "Black" };
 
         string[] maleRashemiNames = { "Borivik", "Vladislak", "Jandar", "Kanitar", "Madislak", "Ralmevik", "Faur Gar", "Shaumar" };
         string[] femaleRashemiNames = { "Imsel", "Immit", "Navarra", "Tammit", "Fayvarra", "Hulmarra", "Shevarra", "Yuldra" };
@@ -84,14 +98,20 @@ namespace Dragons
 
         // Тетирец / Tethyrian
         // Кожа - смуглая.
+        public string[] tethyrianSkinColor = { "Dark" };
         // Волосы - коричневые.
+        public string[] tethyrianHairColor = { "Brown" };
         // Глаза - голубые.
+        public string[] tethyrianEyeColor = { "Blue" };
         // Используют чондатанские имена.
 
         // Тёрами / Turami
         // Кожа - тёмно-красная.
+        public string[] turamiSkinColor = { "Dark Red" };
         // Волосы - чёрные.
+        public string[] turamiHairColor = { "Black" };
         // Глаза - чёрные.
+        public string[] turamiEyeColor = { "Black" };
 
         string[] maleTuramiNames = { "Anton", "Diero", "Marcon", "Pieron", "Rimardo", "Romero", "Salazar", "Umbero" };
         string[] femaleTuramiNames = { "Balama", "Vonda", "Jalana", "Dona", "Kuara", "Louise", "Martha", "Selise", "Faila" };
@@ -99,8 +119,11 @@ namespace Dragons
 
         // Чондатанец / Chondathan
         // Кожа - смуглая.
+        public string[] chondathanSkinColor = { "Dark" };
         // Волосы - от светлых до почти чёрных.
+        public string[] chondathanHairColor = { "Blond", "Black" };
         // Глаза - зелёные или карие.
+        public string[] chondathanEyeColor = { "Green", "Brown" };
 
         string[] maleChondathanNames = { "Gorstag", "Grim", "Darvin", "Dorn", "Malark", "Morn", "Randal", "Stedd", "Helm", "Evendur" };
         string[] femaleChondathanNames = { "Arvin", "Jessail", "Kerry", "Lurin", "Miri", "Rowan", "Tessele", "Shandry", "Esvel" };
@@ -108,8 +131,11 @@ namespace Dragons
 
         // Шу / Shou
         // Кожа - желтовато-бронзовая.
+        public string[] shouSkinColor = { "Yellowish-Bronze" };
         // Волосы - тёмные.
+        public string[] shouHairColor = { "Dark" };
         // Глаза - чёрные.
+        public string[] shouEyeColor = { "Black" };
 
         string[] maleShouNames = { "An", "Wen", "Long", "Lian", "Meng", "On", "Fai", "Jiong", "Jian", "Chen", "Chi", "Shan", "Shui" };
         string[] femaleShouNames = { "Bai", "Xiao", "Lei", "Mei", "Tai", "Jia", "Chao", "Shui" };
