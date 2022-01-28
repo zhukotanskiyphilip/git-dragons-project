@@ -13,10 +13,10 @@ namespace Dragons
         // Увеличение характеристик. Значение всех характеристик увеличивается на 1.
         // Возраст. Люди становятся взрослыми в районе 20 лет, и живут менее столетия. 
         // Мировоззрение. Люди не имеют склонности к определённому мировоззрению.
-        // Размер - Средний.
-        // Рост - 152 - 183 сантиметра.
-        // Вес - 60 - 112 килограмм.
-        // Скорость - 30 футов.
+        // Размер. Средний.
+        // Рост. 152 - 183 сантиметра.
+        // Вес. 60 - 112 килограмм.
+        // Скорость. 30 футов.
         // Языки. Общий и ещё один на выбор.
 
         // АЛЬТЕРНАТИВНЫЕ ОСОБЕННОСТИ ЛЮДЕЙ
@@ -27,11 +27,11 @@ namespace Dragons
         // Черта. Вы получаете одну черту на ваш выбор.
 
         // ВНЕШНОСТЬ
-        // Волосы - любые.
+        // Волосы. Любые.
         public string[] allowedHair = { "None", "Short", "Long" };
-        // Бороды - любые.
+        // Бороды. Любые.
         public string[] allowedBeard = { "None", "Short", "Long" };
-        // Усы - любые.
+        // Усы. Любые.
         public string[] allowedMustache = { "None", "Short", "Long" };
 
         // ПОДРАСЫ
@@ -44,9 +44,9 @@ namespace Dragons
         // Цвет глаз - карие.
         public string[] damaranEyeColor = { "Brown" };
 
-        string[] maleDamaranNames = { "Ivor", "Bor", "Glair", "Grigor", "Egan", "Kozef", "Mival", "Eagle", "Pavel", "Sergor", "Faudel" };
-        string[] femaleDamaranNames = { "Aletra", "Zora", "Kara", "Katernin", "Mara", "Natalie", "Olma", "Tana" };
-        string[] surnamesDamaran = { "Bersk", "Dotsk", "Kulenov", "Marsk", "German", "Starag", "Chernin", "Shemov" };
+        string[] maleDamaranNames = { "Bor", "Fodel", "Glar", "Grigor", "Igan", "Ivor", "Kosef", "Mival", "Orel", "Pavel", "Sergor" };
+        string[] femaleDamaranNames = { "Alethra", "Kara", "Katernin", "Mara", "Natali", "Olma", "Tana", "Zora" };
+        string[] surnamesDamaran = { "Bersk", "Chernin", "Dotsk", "Kulenov", "Marsk", "Nemetsk", "Shemov", "Starag" };
 
         // Иллусканец / Illuskan
         // Кожа - светлая.
@@ -56,9 +56,9 @@ namespace Dragons
         // Глаза - голубые или серые со стальным оттенком.
         public string[] illuskanEyeColor = { "Blue", "Gray" };
 
-        string[] maleIlluskanNames = { "Blas", "Bran", "Get", "Lander", "Lute", "Mulser", "Stor", "Taman", "Urt", "Frat", "Ender" };
-        string[] femaleIlluskanNames = { "Amafrey", "Betkha", "Vestra", "Ketra", "Mara", "Olga", "Silifrey", "Cefrey" };
-        string[] surnamesIlluskan = { "Brightwood", "Winddriver", "Luckman", "Helder", "Hornraven", "Stormwind" };
+        string[] maleIlluskanNames = { "Ander", "Blath", "Bran", "Frath", "Geth", "Lander", "Luth", "Malcer", "Stor", "Taman", "Urth" };
+        string[] femaleIlluskanNames = { "Amafrey", "Betha", "Cefrey", "Kethra", "Mara", "Olga", "Silifrey", "Westra" };
+        string[] surnamesIlluskan = { "Brightwood", "Helder", "Hornraven", "Lackman", "Stormwind", "Windrivver" };
 
         // Калишит / Calishite
         // Кожа - смугло-коричневая.
@@ -68,9 +68,9 @@ namespace Dragons
         // Глаза - коричневые.
         public string[] сalishiteEyeColor = { "Brown" };
 
-        string[] maleCalishiteNames = { "Aseir", "Bardeid", "Zasheir", "Khemed", "Mehmen", "Sudeiman", "Haseid" };
-        string[] femaleCalishiteNames = { "Atala", "Jasmal", "Zasheida", "Meilil", "Seydil", "Seipora", "Ham", "Yasheira" };
-        string[] surnamesCalishite = { "Basha", "Jassan", "Dumein", "Khalid", "Mostana", "Pashar", "Rein" };
+        string[] maleCalishiteNames = { "Aseir", "Bardeid", "Haseid", "Khemed", "Mehmen", "Sudeiman", "Zasheir" };
+        string[] femaleCalishiteNames = { "Atala", "Ceidil", "Hama", "Jasmal", "Meilil", "Seipora", "Yasheira", "Zasheida" };
+        string[] surnamesCalishite = { "Basha", "Dumein", "Jassan", "Khalid", "Mostana", "Pashar", "Rein" };
 
         // Мулан / Mulan
         // Кожа - цвета янтаря.
@@ -80,9 +80,9 @@ namespace Dragons
         // Глаза - карие или светло-коричневые.
         public string[] mulanEyeColor = { "Brown", "Light Brown" };
         
-        string[] maleMulanNames = { "Aot", "Bareris", "Ketoth", "Mu med", "Ramas", "So - Kehur", "Thazar - De", "Urkhur", "Ehput Ki" };
-        string[] femaleMulanNames = { "Arizima", "Zolis", "Muriti", "Nefis", "Nulara", "Sefris", "Tola", "Umar", "Chathi" };
-        string[] surnamesMulan = { "Ankhalab", "Anskuld", "Natandem", "Serpet", "Uutrakt", "Fezim", "Hahpet" };
+        string[] maleMulanNames = { "Aoth", "Bareris", "Ehput-Ki", "Kethoth", "Mumed", "Ramas", "So-Kehur", "Thazar-De", "Urhur" };
+        string[] femaleMulanNames = { "Arizima", "Chathi", "Nephis", "Nulara", "Murithi", "Sefris", "Thola", "Umara", "Zolis" };
+        string[] surnamesMulan = { "Ankhalab", "Anskuld", "Fezim", "Hahpet", "Nathandem", "Sepret", "Uuthrakt" };
 
         // Рашеми / Rashemi
         // Кожа - тёмная.
@@ -92,9 +92,9 @@ namespace Dragons
         // Глаза - чёрные.
         public string[] rashemiEyeColor = { "Black" };
 
-        string[] maleRashemiNames = { "Borivik", "Vladislak", "Jandar", "Kanitar", "Madislak", "Ralmevik", "Faur Gar", "Shaumar" };
-        string[] femaleRashemiNames = { "Imsel", "Immit", "Navarra", "Tammit", "Fayvarra", "Hulmarra", "Shevarra", "Yuldra" };
-        string[] surnamesRashemi = { "Dairinina", "Iltaziara", "Murnitara", "Stayanoga", "Ulmokina", "Chergoba" };
+        string[] maleRashemiNames = { "Borivik", "Faurgar", "Jandar", "Kanithar", "Madislak", "Ralmevik", "Shaumar", "Vladislak" };
+        string[] femaleRashemiNames = { "Fyevarra", "Hulmarra", "Immith", "Imzel", "Navarra", "Shevarra", "Tammith", "Yuldra" };
+        string[] surnamesRashemi = { "Chergoba", "Dyernina", "Iltazyara", "Murnyethara", "Stayanoga", "Ulmokina" };
 
         // Тетирец / Tethyrian
         // Кожа - смуглая.
@@ -114,8 +114,8 @@ namespace Dragons
         public string[] turamiEyeColor = { "Black" };
 
         string[] maleTuramiNames = { "Anton", "Diero", "Marcon", "Pieron", "Rimardo", "Romero", "Salazar", "Umbero" };
-        string[] femaleTuramiNames = { "Balama", "Vonda", "Jalana", "Dona", "Kuara", "Louise", "Martha", "Selise", "Faila" };
-        string[] surnamesTurami = { "Agosto", "Astorio", "Domine", "Calabra", "Marivaldi", "Pisacar", "Ramondo", "Falone" };
+        string[] femaleTuramiNames = { "Balama", "Dona", "Faila", "Jalana", "Luisa", "Marta", "Quara", "Selise", "Vonda" };
+        string[] surnamesTurami = { "Agosto", "Astorio", "Calabra", "Domine", "Falone", "Marivaldi", "Pisacar", "Ramondo" };
 
         // Чондатанец / Chondathan
         // Кожа - смуглая.
@@ -125,9 +125,9 @@ namespace Dragons
         // Глаза - зелёные или карие.
         public string[] chondathanEyeColor = { "Green", "Brown" };
 
-        string[] maleChondathanNames = { "Gorstag", "Grim", "Darvin", "Dorn", "Malark", "Morn", "Randal", "Stedd", "Helm", "Evendur" };
-        string[] femaleChondathanNames = { "Arvin", "Jessail", "Kerry", "Lurin", "Miri", "Rowan", "Tessele", "Shandry", "Esvel" };
-        string[] surnamesChondathan = { "Buckman", "Graycastle", "Dundragon", "Tolstag", "Evenwood", "Emblecrown" };
+        string[] maleChondathanNames = { "Darvin", "Dorn", "Evendur", "Gorstag", "Grim", "Helm", "Malark", "Morn", "Randal", "Stedd" };
+        string[] femaleChondathanNames = { "Arveene", "Esvele", "Jhessail", "Kerri", "Lureene", "Miri", "Rowan", "Shandri", "Tessele" };
+        string[] surnamesChondathan = { "Amblecrown", "Buckman", "Dundragon", "Evenwood", "Greycastle", "Tallstag" };
 
         // Шу / Shou
         // Кожа - желтовато-бронзовая.
@@ -137,9 +137,9 @@ namespace Dragons
         // Глаза - чёрные.
         public string[] shouEyeColor = { "Black" };
 
-        string[] maleShouNames = { "An", "Wen", "Long", "Lian", "Meng", "On", "Fai", "Jiong", "Jian", "Chen", "Chi", "Shan", "Shui" };
-        string[] femaleShouNames = { "Bai", "Xiao", "Lei", "Mei", "Tai", "Jia", "Chao", "Shui" };
-        string[] surnamesShou = { "Wan", "Kao", "Kung", "Lao", "Ling", "Mei", "Ping", "Sum", "Tan", "Huang", "Chien", "Shin" };
+        string[] maleShouNames = { "An", "Chen", "Chi", "Fai", "Jiang", "Jun", "Lian", "Long", "Meng", "On", "Shan", "Shui", "Wen" };
+        string[] femaleShouNames = { "Bai", "Chao", "Jia", "Lei", "Mei", "Qiao", "Shui", "Tai" };
+        string[] surnamesShou = { "Chien", "Huang", "Kao", "Kung", "Lao", "Ling", "Mei", "Pin", "Shin", "Sum", "Tan", "Wan" };
 
         public Human(bool male, string subrace)
         {

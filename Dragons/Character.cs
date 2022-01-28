@@ -70,8 +70,8 @@ namespace Dragons
             Neutral_Good,
             True_Neutral,
             Neutral_Evil,
-            Chaotic_Neutral,
             Chaotic_Good,
+            Chaotic_Neutral,
             Chaotic_Evil
         }
 

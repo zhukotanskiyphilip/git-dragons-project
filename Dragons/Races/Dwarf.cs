@@ -11,12 +11,12 @@ namespace Dragons
         // ОСОБЕННОСТИ ДВАРФОВ
 
         // Увеличение характеристик. Телосложение увеличивается на 2.
-        // Возраст. становятся взрослыми в районе 50 лет. Живут до 500 лет.
+        // Возраст. Становятся взрослыми в районе 50 лет. Живут до 500 лет.
         // Мировоззрение. Большинство дварфов законопослушные.
-        // Размер — Средний.
-        // Рост - 122 - 152 сантиметра.
-        // Вес - 65 - 70 килограмм.
-        // Скорость - 25 футов.
+        // Размер. Средний.
+        // Рост. 122 - 152 сантиметра.
+        // Вес. 65 - 70 килограмм.
+        // Скорость. 25 футов.
         // Языки. Общий и Дварфский.
 
         // Ношение тяжёлых доспехов не снижает скорость.
@@ -29,28 +29,28 @@ namespace Dragons
 
         // ВНЕШНОСТЬ ДВАРФОВ
 
-        // Кожа - от светло-коричневый до темно-коричневого (оттенки земли).
+        // Кожа. От светло-коричневый до темно-коричневого (оттенки земли).
         string[] allowedSkinColor = { "Deep Brown", "Light Brown" };
-        // Волосы - длинные, черные, седые или каштановые, иногда рыжие.
+        // Волосы. Длинные, черные, седые или каштановые, иногда рыжие.
         string[] allowedHair = { "Long" };
         string[] allowedHairColor = { "Black", "Gray", "Brown", "Red" };
-        // Глаза - коричневые, ореховые.
+        // Глаза. Коричневые, ореховые.
         string[] allowedEyeColor = { "Brown", "Hazel" };
-        // Бороды - длинные.
+        // Бороды. Длинные.
         string[] allowedBeard = { "Long" };
-        // Усы - длинные.
+        // Усы. Длинные.
         string[] allowedMustache = { "Long" };
 
 
         // ИМЕНА ДВАРФОВ
 
-        string[] maleNames = {"Adrik", "Alberich", "Barend", "Baern", "Brottor", "Bruenor", "Vondal", "Waite", "Gardain", "Dain",
-            "Darrak", "Delg", "Kildrak", "Morgran", "Orsik", "Oscar", "Rangrim", "Rurik", "Taklinn", "Toradin", "Tordek", "Thorin",
-            "Trawok", "Traubon", "Ulfgar", "Fargrim", "Flint", "Harbeck", "Eberk", "Einkil" };
-        string[] femaleNames = { "Artin", "Bardrin", "Wistra", "Gunnloda", "Gurdis", "Dagnal", "Dieza", "Ilde", "Katra", "Kristid", "Liftrasa",
-                "Mardred", "Odhild", "Risvin", "Sunnl", "Torbera", "Torgga", "Falkrunn", "Finellen", "Helja", "Hlin", "Eldeth", "Ember" };
-        string[] surnames = { "Balderk", "Warhammer", "Gorunn", "Dankil", "Ironfist", "Stout Anvil", "Icebeard", "Loderr", "Lütger", "Fireforge",
-                "Ramnaheim", "Strakeln", "Thorunn", "Ungart", "Holderheck" };
+        string[] maleNames = { "Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil",
+            "Fargrim", "Flint", "Gardain", "Harbek", "Kildrak", "Morgran", "Orsik", "Oskar", "Rangrim", "Rurik", "Taklinn", "Thoradin",
+            "Thorin", "Tordek", "Traubon", "Travok", "Ulfgar", "Veit", "Vondal" };
+        string[] femaleNames = { "Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda",
+            "Gurdis", "Helja", "Hlin", "Kathra", "Kristryd", "Ilde", "Liftrasa", "Mardred", "Riswynn", "Sannl", "Torbera", "Torgga", "Vistra" };
+        string[] surnames = { "Balderk", "Battlehammer", "Brawnanvil", "Dankil", "Fireforge", "Frostbeard", "Gorunn", "Holderhek", "Ironfist",
+            "Loderr", "Lutgehr", "Rumnaheim", "Strakeln", "Torunn", "Ungart" };
 
         // ПОДРАСЫ
 
