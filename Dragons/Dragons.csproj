@@ -45,16 +45,13 @@
   <ItemGroup>
     <Compile Include="Character.cs" />
     <Compile Include="Races\Human.cs" />
-    <Compile Include="Races\Elf\Dark Elf.cs" />
     <Compile Include="Races\Dwarf.cs" />
-    <Compile Include="Races\Elf\Elf.cs" />
-    <Compile Include="Races\Elf\High Elf.cs" />
+    <Compile Include="Races\Elf.cs" />
     <Compile Include="Races\Halfling\Halfling.cs" />
     <Compile Include="Races\Halfling\Light-Leged Halfling.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Races\Elf\Wood Elf.cs" />
     <Compile Include="Races\Halfling\Stocky Halfling.cs" />
   </ItemGroup>
   <ItemGroup>

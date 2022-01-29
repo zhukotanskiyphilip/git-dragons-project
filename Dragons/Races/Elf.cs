@@ -40,7 +40,7 @@ namespace Dragons
 
         // ИМЕНА ЭЛЬФОВ
 
-        string[] childrenNames = { "Ara", "Bryn", "Del", "Eryn", "Faen", "Innil", "Lael", "Mella", "Naill", "Naeris",
+        string[] childhoodNames = { "Ara", "Bryn", "Del", "Eryn", "Faen", "Innil", "Lael", "Mella", "Naill", "Naeris",
             "Phann", "Rael", "Rinn", "Sai", "Syllin", "Thia", "Vall" };
         string[] maleNames = { "Adran", "Aelar", "Aramil", "Arannis", "Aust", "Beiro", "Berrian", "Carric", "Enialis",
             "Erdan", "Erevan", "Galinndan", "Hadarai", "Heian", "Himo", "Immeral", "Ivellios", "Laucian", "Mindartis",
@@ -130,7 +130,7 @@ namespace Dragons
 
             agility += 2;
 
-            RandomNameGen(maleNames, femaleNames, surnames, childrenNames, 100);
+            RandomNameGen(maleNames, femaleNames, surnames, childhoodNames, 100);
 
             switch (subrace)
             {
@@ -145,6 +145,7 @@ namespace Dragons
                     break;
                 case "Dark Elf":
                     charisma++;
+                    alignment = Alignment.Chaotic_Evil;
                     RandomAppearanceGen(male, darkElfSkinColor, darkElfHairColor, darkElfEyeColor, allowedHair, allowedBeard, allowedMustache);
                     break;
             }

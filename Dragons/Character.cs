@@ -37,17 +37,17 @@ namespace Dragons
 
         // Случайная генерация имени
 
-        public void RandomNameGen(string[] maleNames, string[] femaleNames, string[] surnames, string[] childrenNames = null, int maturity = 0)
+        public void RandomNameGen(string[] maleNames, string[] femaleNames, string[] surnames, string[] childhoodNames = null, int maturity = 0)
         {
             Random rand = new Random();
 
-            if (age > maturity && childrenNames != null)
+            if (age > maturity && childhoodNames != null)
             {
                 if (male == true)
                     name = maleNames[rand.Next(0, maleNames.Length)];
                 else name = femaleNames[rand.Next(0, femaleNames.Length)];
             }
-            else name = childrenNames[rand.Next(0, childrenNames.Length)];
+            else name = childhoodNames[rand.Next(0, childhoodNames.Length)];
 
             surname = surnames[rand.Next(0, surnames.Length)];
         }
@@ -189,6 +189,7 @@ namespace Dragons
             Random rand = new Random();
 
             age = rand.Next(ageMin, ageMax);
+            alignment = (Alignment)rand.Next(alignmentMin, alignmentMax);
             height = rand.Next(heightMin, heightMax);
             weight = rand.Next(weightMin, weightMax);
 

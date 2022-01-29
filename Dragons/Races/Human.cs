@@ -151,7 +151,7 @@ namespace Dragons
             ageMax = 100;
 
             alignmentMin = 0;
-            alignmentMax = 5;
+            alignmentMax = 8;
 
             size = Size.Medium;
 
