@@ -69,7 +69,7 @@ namespace Dragons
             "Kepeshkmolik", "Kerrhylon", "Kimbatuul", "Linxakasendalor", "Myastan", "Nemmonis", "Norixius",
             "Ophinshtalajiir", "Prexijandilin", "Shestendeliath", "Turnuroth", "Verthisathurgiesh", "Yarjerit" };
 
-        public Dragonborn(bool male, string subrace)
+        public Dragonborn(bool male)
         {
 
             this.male = male;
